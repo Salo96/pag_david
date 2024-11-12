@@ -1,0 +1,90 @@
+   body{
+    background:  #F2F2F2;
+   }
+   
+   /* Top header styling */
+
+.top-header {
+    background-color: #f8f9fa;
+}
+
+.contact-info {
+    font-size: 0.875rem;
+}
+
+.social-icons a {
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+/* hero */
+.hero {
+    width: 100vw; /* Ancho completo de la pantalla */
+    height: 120vh; /* Altura del 120% de la pantalla */
+    background-image: url('https://t4.ftcdn.net/jpg/08/07/90/35/360_F_807903598_5yZ6dOaNvVi6MKZxGK6Dvnm999ciNc9e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier padding */
+    overflow: hidden; /* Evita desplazamientos no deseados */
+}
+
+
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Ajustes para la sección de características (Features) */
+
+.features .feature-icon {
+    font-size: 3rem; /* Tamaño de ícono en pantallas grandes */
+    color: #ffc107; /* Color del ícono */
+}
+
+.features h5 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.features p {
+    font-size: 1rem;
+}
+
+/* Media queries para pantallas medianas y pequeñas */
+@media (max-width: 768px) {
+    .features .feature-icon {
+        font-size: 2.5rem; /* Ajuste para pantallas medianas */
+    }
+
+    .features h5 {
+        font-size: 1.3rem; /* Tamaño de título más pequeño */
+    }
+
+    .features p {
+        font-size: 0.95rem; /* Tamaño de párrafo más pequeño */
+    }
+}
+
+@media (max-width: 576px) {
+    .features .feature-icon {
+        font-size: 2rem; /* Ajuste para pantallas pequeñas */
+    }
+
+    .features h5 {
+        font-size: 1.2rem; /* Título más pequeño para pantallas pequeñas */
+    }
+
+    .features p {
+        font-size: 0.9rem; /* Párrafo más pequeño para pantallas pequeñas */
+    }
+}
+
+
+
