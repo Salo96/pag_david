@@ -1,90 +1,394 @@
-   body{
-    background:  #F2F2F2;
-   }
-   
-   /* Top header styling */
-
-.top-header {
+body {
+    background: #f2f2f2;
+  }
+  
+  /* Reset de márgenes y bordes */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Asegura que el ancho y alto no se vean afectados por padding o bordes */
+  }
+  
+  
+  /* Top header styling */
+  
+  .top-header {
     background-color: #f8f9fa;
-}
-
-.contact-info {
+  }
+  
+  .contact-info {
     font-size: 0.875rem;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     font-size: 1.25rem;
     text-decoration: none;
-}
-
-/* hero */
-.hero {
-    width: 100vw; /* Ancho completo de la pantalla */
-    height: 120vh; /* Altura del 120% de la pantalla */
-    background-image: url('https://t4.ftcdn.net/jpg/08/07/90/35/360_F_807903598_5yZ6dOaNvVi6MKZxGK6Dvnm999ciNc9e.jpg');
+  }
+  
+  /* hero */
+  .hero {
+    width: 100vw;
+    /* Ancho completo de la pantalla */
+    height: 120vh;
+    /* Altura del 120% de la pantalla */
+    background-image: url("https://t4.ftcdn.net/jpg/08/07/90/35/360_F_807903598_5yZ6dOaNvVi6MKZxGK6Dvnm999ciNc9e.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
     color: #fff;
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina cualquier padding */
-    overflow: hidden; /* Evita desplazamientos no deseados */
-}
-
-
-
-.hero .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    margin: 0;
+    /* Elimina cualquier margen */
+    padding: 0;
+    /* Elimina cualquier padding */
+    overflow: unset;
+    /* Evita desplazamientos no deseados */
+  }
+  
+  .hero a {
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del texto */
+    padding: 20px 40px;
+    /* Aumenta el padding para hacerlo más grande */
+    border-radius: 10px;
+    /* Redondea las esquinas */
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 576px) {
+  
+    .hero {
+      padding: 0;
+      /* Ajusta el padding para pantallas pequeñas */
+      height: 100vh;
+      /* Asegura que no haya desbordamiento vertical */
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  .hero p {
+    font-size: 2rem;
+  }
+  
+  .hero .overlay {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* Fondo oscuro semitransparente */
     padding: 2rem;
     border-radius: 5px;
-}
-
-/* Ajustes para la sección de características (Features) */
-
-.features .feature-icon {
-    font-size: 3rem; /* Tamaño de ícono en pantallas grandes */
-    color: #ffc107; /* Color del ícono */
-}
-
-.features h5 {
-    font-size: 1.5rem;
+  }
+  
+  /* Ajustes para la sección de características (Features) */
+  
+  .features {
+    position: relative;
+    top: -140px;
+    /* Mueve el icono 5 píxeles hacia arriba */
+  }
+  
+  .features-white {
+    background: #fff;
+    margin-left: 30px;
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Centra el contenido verticalmente */
+  }
+  
+  /* Ajuste para pantallas medianas */
+  @media (max-width: 1000px) {
+  
+    .features {
+      position: relative;
+      top: 20px;
+      /* Mueve el icono 5 píxeles hacia arriba */
+    }
+  
+    .features-white {
+      width: 100%;
+      height: auto;
+      /* Ancho completo en pantallas medianas y pequeñas */
+      margin-left: 0;
+      /* Elimina el margen izquierdo en pantallas medianas */
+    }
+  }
+  
+  /* Ajuste de tamaños para íconos y textos */
+  .features .feature-icon {
+    font-size: 5rem;
+    color: #ffc107;
+  }
+  
+  .features h5 {
+    font-size: 2rem;
     margin-top: 1rem;
-}
-
-.features p {
+  }
+  
+  .features p {
+    font-size: 1.5rem;
+  }
+  
+  
+  @media (max-width: 576px) {
+    .features .feature-icon {
+      font-size: 3rem;
+    }
+  
+    .features h5 {
+      font-size: 1.4rem;
+    }
+  
+    .features p {
+      font-size: 1rem;
+    }
+  }
+  
+  .mission p {
+    font-size: 1.2rem;
+  }
+  
+  .mission h5 {
+    color: #F2A20C;
+    font-weight: bold;
+  }
+  
+  .mission a {
+    background: #F2A20C;
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del texto */
+    padding: 15px 60px;
+    /* Aumenta el padding para hacerlo más grande */
+    border-radius: 10px;
+    /* Redondea las esquinas */
+  }
+  
+  /* Aplica margen inferior cuando esté en col-sm-12 */
+  @media (max-width: 762px) {
+    .custom-btn {
+      margin-bottom: 20px;
+      /* Ajusta el valor según sea necesario */
+    }
+  }
+  
+  /* PROJECT */
+  /* Estilos del hover y la línea */
+  .project-btn {
+    position: relative;
+    /* Necesario para posicionar la línea debajo */
+    display: block;
+    text-align: center;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    /* Asegura que no haya borde visible */
+    outline: none;
+    /* Elimina el borde de enfoque del botón */
+  }
+  
+  /* La línea debajo del botón */
+  .project-btn .underline {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Inicialmente no es visible */
+    height: 3px;
+    background-color: #F2A20C;
+    /* Color de la línea */
+    transition: width 0.4s ease-in-out;
+    /* Transición suave y duradera */
+  }
+  
+  /* Efecto hover: hacer que la línea aparezca de izquierda a derecha */
+  .project-btn:hover .underline,
+  .project-btn.active .underline {
+    width: 100%;
+    /* La línea se expande a lo largo del ancho del botón */
+  }
+  
+  /* Cuando se hace clic o el botón tiene foco, la línea permanece visible */
+  .project-btn:focus .underline,
+  .project-btn:active .underline {
+    width: 100%;
+    /* La línea sigue visible */
+  }
+  
+  .project a {
+    background: #F2A20C;
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del texto */
+    padding: 15px 60px;
+    /* Aumenta el padding para hacerlo más grande */
+    border-radius: 10px;
+    /* Redondea las esquinas */
+  }
+  
+  .project h5 {
+    color: #F2A20C;
+    font-weight: bold;
+  }
+  
+  
+  /* slider o carrousel */
+  /* Container for the slider */
+  #projectCarousel {
+    max-width: 100%;
+    margin: auto;
+    /* Centra el carrusel */
+    position: relative;
+    /* Asegura que no haya desbordamientos */
+  }
+  
+  /* Ajustar el alto de las imágenes */
+  #projectCarousel .carousel-item img {
+    width: 100%;
+    height: 600px;
+    /* Mantén la altura ajustada */
+    object-fit: contain;
+    /* Cambiado para mostrar la imagen completa sin recortes */
+    object-position: center;
+    /* Centra la imagen si es necesario */
+  }
+  
+  @media (max-width: 768px) {
+  
+    #projectCarousel .carousel-item img {
+  
+      height: 0;
+  
+    }
+  
+  }
+  
+  /* Opcional: Personaliza el texto de la leyenda */
+  #projectCarousel .carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Agrega sombra para mejor visibilidad */
+  }
+  
+  #projectCarousel .carousel-caption p {
     font-size: 1rem;
-}
-
-/* Media queries para pantallas medianas y pequeñas */
-@media (max-width: 768px) {
-    .features .feature-icon {
-        font-size: 2.5rem; /* Ajuste para pantallas medianas */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    /* Agrega sombra para mejor visibilidad */
+  }
+  
+  /* Estilo para los íconos de navegación */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: orange;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Opcional: Ajuste de los controles en pantallas grandes */
+  @media (min-width: 768px) {
+  
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 40px;
+      height: 40px;
     }
-
-    .features h5 {
-        font-size: 1.3rem; /* Tamaño de título más pequeño */
-    }
-
-    .features p {
-        font-size: 0.95rem; /* Tamaño de párrafo más pequeño */
-    }
-}
-
-@media (max-width: 576px) {
-    .features .feature-icon {
-        font-size: 2rem; /* Ajuste para pantallas pequeñas */
-    }
-
-    .features h5 {
-        font-size: 1.2rem; /* Título más pequeño para pantallas pequeñas */
-    }
-
-    .features p {
-        font-size: 0.9rem; /* Párrafo más pequeño para pantallas pequeñas */
-    }
-}
-
-
-
+  }
+  
+  
+  /* testimonial */
+  .testimonial-card {
+    max-width: 500px;
+    border: none;
+    padding: 3.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .quote-icon {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #ff6600;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 1px;
+    left: 20px;
+  }
+  .testimonial-text {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  .author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+  }
+  .author-name {
+    font-weight: 600;
+  }
+  
+  /* Centrar el ícono en pantallas pequeñas en saber mas */
+  @media (max-width: 767px) {
+      .custom-icon {
+          justify-content: center !important;
+      }
+  }
+  
+  
+  /* footer */
+  
+  /* body {
+    font-family: Arial, sans-serif;
+  } */
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .social-media a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .social-media a:hover {
+    text-decoration: underline;
+  }
+  
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #e65c00;
+  }
+  
